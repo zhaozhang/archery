@@ -123,6 +123,12 @@ case class RTree[A](root: Node[A], size: Int) {
     root.search(space, f)
 
   /**
+   * Return a sequence of all entries that contain the give search point.ß
+   */
+  def searchWithIn(pt: Point): Seq[Entry[A]] = 
+    root.searchWithIn(pt.toBox, _ => true)
+
+  /**
    * Return a sequence of all entries intersecting the given search space.
    */
   def searchIntersection(space: Box): Seq[Entry[A]] =

@@ -218,6 +218,12 @@ sealed abstract class Node[A] extends HasGeom { self =>
     genericSearch(space, space.contains, f)
 
   /**
+   * Search all entries that contains this search point
+   */
+  def searchWithIn(space: Box, f: Entry[A] => Boolean): Seq[Entry[A]] =
+    genericSearch(space, space.withIn, f)
+
+  /**
    * Search for all entries intersecting the search space.
    *
    * Points on the boundary of the search space will be included.

@@ -84,6 +84,10 @@ sealed trait Geom {
   def contains(geom: Geom): Boolean =
     x <= geom.x && geom.x2 <= x2 && y <= geom.y && geom.y2 <= y2
 
+
+  def withIn(geom: Geom): Boolean = 
+    x >= geom.x && x <= geom.x2 && y >= geom.y && y<= geom.y2
+    
   /**
    * Returns whether this geometry intersects with the other.
    *

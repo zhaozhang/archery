@@ -3,7 +3,7 @@ import sbt.Keys._
 
 lazy val buildSettings = Seq(
   organization := "com.meetup",
-  scalaVersion := "2.11.6",
+  scalaVersion := "2.10.4",
   licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
   homepage := Some(url("http://github.com/meetup/archery")),
   version := "0.4.0",
