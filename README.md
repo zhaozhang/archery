@@ -1,4 +1,5 @@
 ## Archery
+This is a modified version of Archery using 2d contour as entries.
 
 ### Overview
 
